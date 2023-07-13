@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineMagic</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/eb22379432.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div class="nav__container">
+          <figure>
+            <img class="logo" src="/assets/logo.png" alt="" />
+          </figure>
+          <ul class="nav__links">
+            <li>
+              <a
+                href="#"
+                class="nav__link link__hover-effect link__hover-effect--brown"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="."
+                class="nav__link link__hover-effect link__hover-effect--brown"
+                >Movies</a
+              >
+            </li>
+            <li>
+              <a href="#" class="nav__link btn">Contact</a>
+            </li>
+          </ul>
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a href="." class="menu__link" onclick="closeMenu()">Home</a>
+              </li>
+              <li class="menu__list">
+                <a href="#" class="menu__link" onclick="closeMenu()">Movies</a>
+              </li>
+              <li class="menu__list">
+                <a
+                  href="#"
+                  class="menu__link btn btn__menu--login"
+                  onclick="closeMenu()"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="search__wrapper">
+          <h1>Watch your Favourite Movie here</h1>
+          <div class="input__wrap">
+            <input
+              type="text"
+              placeholder="Search by Movie Title"
+              onchange="onSearchChange(event)" />
+            <div class="search__icon">
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
+        </div>
+        <div class="overlay"></div>
+      </nav>
+
+      <section id="movies">
+        <div class="container">
+          <div class="row">
+            <div class="results__wrapper">
+              <h1 class="title">Trending Now:</h1>
+              <select class="filter__movies" id="filter">
+                <option value="" disabled selected>Sort</option>
+                <option value="New_to_Old">New To Old</option>
+                <option value="Old_to_New">Old To New</option>
+              </select>
+            </div>
+            <div class="loading">
+              <i class="fas fa-spinner movies__loading--spinner"></i>
+            </div>
+            <div class="movie__results">
+              <div class="movie">
+                <figure class="movie__cover--wrapper">
+                  <img
+                    class="movie__cover"
+                    src="./assets/SpiderManAcrossSpiderVerse.jpg"
+                    alt="" />
+                </figure>
+                <h2 class="movie__title">
+                  Spider-Man: Across The Spider-Verse
+                </h2>
+                <p class="movie__year">03 June 2023</p>
+              </div>
+              <div class="movie">
+                <figure class="movie__cover--wrapper">
+                  <img
+                    class="movie__cover"
+                    src="./assets/AsteroidCity.jpg"
+                    alt="" />
+                </figure>
+                <h2 class="movie__title">Asteroid City</h2>
+                <p class="movie__year">15 June 2023</p>
+              </div>
+              <div class="movie">
+                <figure class="movie__cover--wrapper">
+                  <img
+                    class="movie__cover"
+                    src="./assets/GardiansOfTheGalaxyVol3.jpg"
+                    alt="" />
+                </figure>
+                <h2 class="movie__title">Gardians of the Galaxy: Volume 3</h2>
+                <p class="movie__year">05 May 2023</p>
+              </div>
+              <div class="movie">
+                <figure class="movie__cover--wrapper">
+                  <img
+                    class="movie__cover"
+                    src="./assets/PastLives.jpg"
+                    alt="" />
+                </figure>
+                <h2 class="movie__title">Past Lives</h2>
+                <p class="movie__year">23 June 2023</p>
+              </div>
+              <div class="movie">
+                <figure class="movie__cover--wrapper">
+                  <img
+                    class="movie__cover"
+                    src="./assets/Elemental2.0.jpg"
+                    alt="" />
+                </figure>
+                <h2 class="movie__title">Elemental</h2>
+                <p class="movie__year">16 June 2023</p>
+              </div>
+              <div class="movie">
+                <figure class="movie__cover--wrapper">
+                  <img
+                    class="movie__cover"
+                    src="./assets/Thelittlemermaid.jpg"
+                    alt="" />
+                </figure>
+                <h2 class="movie__title">The Little Mermaid</h2>
+                <p class="movie__year">26 May 2023</p>
+              </div>
+              <div class="movie">
+                <figure class="movie__cover--wrapper">
+                  <img class="movie__cover" src="./assets/FastX.jpg" alt="" />
+                </figure>
+                <h2 class="movie__title">Fast X</h2>
+                <p class="movie__year">19 May 2023</p>
+              </div>
+              <div class="movie">
+                <figure class="movie__cover--wrapper">
+                  <img
+                    class="movie__cover"
+                    src="./assets/John4Wick.jpg"
+                    alt="" />
+                </figure>
+                <h2 class="movie__title">John Wick: Chapter 4</h2>
+                <p class="movie__year">24 March 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">
+          <div class="row row__footer">
+            <div class="footer__links">
+              <li class="footer__link">Home</li>
+              <li class="footer__link">About us</li>
+              <li class="footer__link">Contact</li>
+            </div>
+            <div class="copyright">Copyright &copy; 2023 CineMagic</div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
