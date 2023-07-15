@@ -81,11 +81,14 @@
           <div class="row">
             <div class="results__wrapper">
               <h1 class="title">Trending Now:</h1>
-              <select class="filter__movies" id="filter">
-                <option value="" disabled selected>Sort</option>
-                <option value="New_to_Old">New To Old</option>
-                <option value="Old_to_New">Old To New</option>
-              </select>
+
+              <div class="movie__filter">
+                <select id="sort" onchange="sortMovieYear(event)">
+                  <option value disabled selected>Sort</option>
+                  <option value="NEW_TO_OLD">New to Old</option>
+                  <option value="OLD_TO_NEW">Old to New</option>
+                </select>
+              </div>
             </div>
             <div class="loading">
               <i class="fas fa-spinner movies__loading--spinner"></i>
