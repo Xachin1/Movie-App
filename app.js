@@ -13,7 +13,7 @@ async function renderMovies(sort) {
   movieResultsEl.style.visibility = 'hidden';
 
   const movieTitles = await fetch(
-    `http://www.omdbapi.com/?i=tt3896198&apikey=bdc05ce&s=${title}`
+    `https://www.omdbapi.com/?i=tt3896198&apikey=bdc05ce&s=${title}`
   );
   const movieTitlesData = await movieTitles.json();
 
