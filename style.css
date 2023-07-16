@@ -93,8 +93,8 @@ nav {
   transition: all 300ms ease;
 }
 
-.link__hover-effect--brown::after {
-  background-color: #ece1e0;
+.link__hover-effect--blue::after {
+  background-color: #25c4cf;
 }
 
 .link__hover-effect:hover::after {
@@ -144,13 +144,13 @@ nav {
   border: none;
   font-size: 40px;
   text-align: center;
-  color: #551e19;
+  color: #ffffff;
   display: none;
   transition: all 300ms ease;
 }
 
 .btn__menu:hover {
-  color: #c56e33;
+  color: #36e6e6;
   cursor: pointer;
 }
 
@@ -164,7 +164,7 @@ nav {
 
 .menu__backdrop {
   position: absolute;
-  background-color: #240401;
+  background-color: #ffffff;
   top: 0;
   left: 0;
   bottom: 0;
@@ -201,7 +201,7 @@ nav {
 .menu__link {
   font-size: 18px;
   font-weight: 600;
-  color: #c56e33;
+  color: #03f0f8;
 }
 
 .search__wrapper {
@@ -252,11 +252,11 @@ input {
   font-weight: 500;
   padding-left: 20px;
   border: none;
-  color: #c56e33;
+  color: #000000;
 }
 
 input:active {
-  border-color: #c56e33;
+  border-color: #000000;
 }
 
 .search__icon {
@@ -272,7 +272,7 @@ input:active {
 }
 
 .search__icon:hover {
-  color: #c56e33;
+  color: rgb(0, 0, 0);
   transform: scale(1.1);
 }
 
@@ -434,7 +434,7 @@ footer {
   margin-top: 10px;
 }
 
-/* MQ*/
+/* Responsiveness */
 
 @media (max-width: 1024px) {
   .nav__container {
